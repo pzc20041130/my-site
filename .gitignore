@@ -1,0 +1,11 @@
+# Course material and scratch files -- not part of the site itself.
+*.zip
+要求.jpg
+屏幕截图*.png
+yuye.jpg
+
+# Editor and OS junk
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini

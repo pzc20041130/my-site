@@ -1,0 +1,444 @@
+/* ---------- Palette ---------- */
+:root {
+  --cream:        #fdf3dc;   /* nav bar            */
+  --ink:          #1f1f1f;   /* text               */
+  --muted:        #6b7280;   /* tagline, footer    */
+  --mint:         #edf7f1;   /* card fill          */
+  --green:        #2f7d5e;   /* card border/text   */
+  --lavender:     #edeff7;   /* footer fill        */
+  --lavender-bd:  #c9cee0;   /* footer border      */
+  --line:         #2b2b2b;   /* nav / button edges */
+  --rule:         #e5e7eb;   /* section rules      */
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Single centred column; everything lives inside it. */
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+/* ---------- Nav ---------- */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.7rem 1rem;
+}
+
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+}
+
+/* The reference reads "Home · Quotes · Ideas · About" -- the dots sit
+   between the links, so they are drawn by a sibling selector rather
+   than typed into the HTML. */
+.nav-links a + a::before {
+  content: "\00b7";
+  margin: 0 0.55rem;
+  color: #9ca3af;
+}
+
+.nav-links a {
+  color: #3f3f46;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+/* The page you are on: darker and bolder, so the nav shows where you are. */
+.nav-links a[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.btn-contact {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 1.1rem;
+  color: var(--ink);
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.btn-contact:hover {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  margin-top: 1.5rem;
+}
+
+/* Banner from the reference design: the hero slot before a real photo lands.
+   Same 20rem box and 10px radius the photo will use, so swapping in an <img>
+   later does not move anything on the page. */
+.hero-banner {
+  width: 100%;
+  height: 20rem;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background:
+    /* faint top-to-bottom shading, as in the reference banner */
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.07)),
+    /* the orange sweep: light at the left, burnt sienna at the right */
+    linear-gradient(90deg, #e7af74 0%, #cf8550 25%, #b85b2e 52%, #9d4320 76%, #82391d 100%);
+}
+
+.hero-banner span {
+  color: #fff7f1;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+/* Ready for the real photo: drop an <img> inside .hero and it inherits the
+   same box. object-fit: cover crops the edges instead of squashing the shot. */
+.hero img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 10px;
+  /* cover centres the crop by default; if the subject sits high in the frame,
+     pull the crop up with something like `center 15%`. */
+  object-position: center;
+}
+
+/* ---------- Title ---------- */
+h1 {
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  letter-spacing: -0.02em;
+  margin: 1.25rem 0 0.25rem;
+}
+
+.tagline {
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* ---------- Entry cards ---------- */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--mint);
+  border: 1px solid var(--green);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  color: var(--green);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card:hover {
+  background: var(--green);
+  color: #fff;
+}
+
+.card .arrow {
+  transition: transform 0.15s ease;
+}
+
+.card:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* ---------- Anchored sections ---------- */
+.section {
+  margin-top: 2.5rem;
+  scroll-margin-top: 1.5rem;
+}
+
+.section h2,
+.list-title {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* A heading that sits on its own, outside a .section: "All quotes". */
+.list-title {
+  margin: 2.75rem 0 1.25rem;
+}
+
+.section p,
+.section li {
+  color: #3f3f46;
+}
+
+.section ul {
+  padding-left: 1.2rem;
+}
+
+.section li {
+  margin-bottom: 0.35rem;
+}
+
+blockquote {
+  margin: 0.75rem 0;
+  padding: 0.25rem 0 0.25rem 1rem;
+  border-left: 3px solid var(--green);
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ---------- Quotes page ---------- */
+.lede {
+  margin: 0 0 2rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* The random quote at the top: the same mint card the entry cards use, so
+   the two pages look like one site. */
+.quote-hero {
+  margin: 1.5rem 0 0;
+  padding: 1.6rem 1.7rem 1.4rem;
+  background: var(--mint);
+  border: 1px solid var(--green);
+  border-radius: 14px;
+}
+
+.quote-hero-text p {
+  margin: 0 0 0.5rem;
+  color: var(--ink);
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.45;
+  text-wrap: pretty;
+}
+
+.quote-hero-text p:last-child {
+  margin-bottom: 0;
+}
+
+.quote-hero-meta {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.quote-hero-meta cite {
+  color: var(--ink);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.quote-hero-btn {
+  margin-top: 1.1rem;
+  padding: 0.3rem 1rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.quote-hero-btn:hover {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+/* The list: one green rule per quote, and the attribution sits under the text
+   instead of hanging out to the left of it. */
+.quote {
+  margin: 0 0 2rem;
+  padding-left: 1.1rem;
+  border-left: 3px solid var(--green);
+}
+
+.quote blockquote {
+  margin: 0 0 0.45rem;
+  padding: 0;
+  border: 0;
+  color: #2b2b2b;
+  font-size: 1.05rem;
+  font-style: italic;
+}
+
+.quote blockquote p {
+  margin: 0 0 0.4rem;
+}
+
+.quote blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.quote footer {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* The dash before the name is drawn here, so the markup stays cite + source. */
+.quote footer::before {
+  content: "\2014\00a0";
+}
+
+.quote cite {
+  color: var(--ink);
+  font-style: normal;
+  font-weight: 600;
+}
+
+a { color: var(--green); }
+
+/* ---------- Footer ---------- */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 3rem;
+  padding: 0.9rem 1rem;
+  background: var(--lavender);
+  border: 1px solid var(--lavender-bd);
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Ideas page ---------- */
+.ideas {
+  counter-reset: idea;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.idea {
+  counter-increment: idea;
+  background: var(--mint);
+  border: 1px solid var(--green);
+  border-radius: 10px;
+  padding: 1rem 1.15rem;
+}
+
+.idea h2 {
+  font-size: 1.05rem;
+  margin: 0 0 0.4rem;
+  color: var(--green);
+}
+
+/* The number is drawn by CSS, so adding an idea never means renumbering
+   the ones below it. */
+.idea h2::before {
+  content: counter(idea, decimal-leading-zero);
+  margin-right: 0.6rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+
+.idea p {
+  margin: 0 0 0.75rem;
+  color: #3f3f46;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tags li {
+  background: #fff;
+  border: 1px solid var(--green);
+  border-radius: 999px;
+  color: var(--green);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  padding: 0.1rem 0.55rem;
+  text-transform: uppercase;
+}
+
+/* A quiet line under the list: not a lede, so it does not push the cards up. */
+.outro {
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ---------- Narrow screens ---------- */
+@media (max-width: 640px) {
+  .page {
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    row-gap: 0.35rem;
+  }
+
+  .hero img,
+  .hero-banner {
+    height: 14rem;
+  }
+
+  .quote-hero {
+    padding: 1.2rem 1.2rem 1.1rem;
+  }
+
+  .quote-hero-text p {
+    font-size: 1.15rem;
+  }
+}

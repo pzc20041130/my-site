@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quotes · Pu Zichao</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page" id="top">
+
+    <header id="site-header"></header>
+
+    <main>
+      <h1>Quotes</h1>
+      <p class="lede">Things worth reading twice: one picked at random above, all sixteen below — each with who said it and where.</p>
+
+      <!-- Filled by quotes.js from the list below: one quote drawn at random,
+           with a button for another. Hidden until there is something to show,
+           so a browser without JavaScript still gets the whole list. -->
+      <section class="quote-hero" id="quote-hero" aria-label="Random quote" hidden>
+        <div aria-live="polite">
+          <div class="quote-hero-text" data-hero-text></div>
+          <p class="quote-hero-meta" data-hero-meta></p>
+        </div>
+        <button class="quote-hero-btn" type="button">Another quote &rarr;</button>
+      </section>
+
+      <h2 class="list-title">All quotes</h2>
+
+      <article class="quote">
+        <blockquote>
+          <p>This is for everyone.</p>
+        </blockquote>
+        <footer>
+          <cite>Tim Berners-Lee</cite>,
+          <span class="source">London Olympic opening ceremony, 2012</span>
+        </footer>
+      </article>
+
+      <article class="quote">
+        <blockquote>
+          <p lang="zh">千里之行，始于足下。</p>
+          <p>A journey of a thousand miles begins beneath your feet.</p>
+        </blockquote>
+        <footer>
+          <cite>Laozi</cite>,
+          <span class="source">Tao Te Ching, chapter 64</span>
+        </footer>
+      </article>
+
+      <article class="quote">
+        <blockquote>
+          <p>That is one small step for man, one giant leap for mankind.</p>
+        </blockquote>
+        <footer>
+          <cite>Neil Armstrong</cite>,
+          <span class="source">Apollo 11 moon landing, 1969</span>
+        </footer>
+      </article>
+
+      <article class="quote">
+        <blockquote>
+          <p>Ask not what your country can do for you; ask what you can do for your country.</p>
+        </blockquote>
+        <footer>
+          <cite>John F. Kennedy</cite>,
+          <span class="source">1961 inaugural address</span>
+        </footer>
+      </article>
+
+      <article class="quote">
+        <blockquote>
+          <p>The only thing we have to fear is fear itself.</p>
+        </blockquote>
+        <footer>
+          <cite>Franklin D. Roosevelt</cite>,
+          <span class="source">1933 inaugural address</span>
+        </footer>
+      </article>
+
+      <article class="quote">
+        <blockquote>
+          <p>Government of the people, by the people, for the people.</p>
+        </blockquote>
+        <footer>
+          <cite>Abraham Lincoln</cite>,
+          <span class="source">Gettysburg Address, 1863</span>
+        </footer>
+      </article>
+
+      <article class="quote">
+        <blockquote>
+          <p>Give me liberty, or give me death!</p>
+        </blockquote>
+        <footer>
+          <cite>Patrick Henry</cite>,
+          <span class="source">1775 speech to the Virginia Convention</span>
+        </footer>
+      </article>
+
+      <article class="quote">
+        <blockquote>
+          <p>Our long national nightmare is over.</p>
+        </blockquote>
+        <footer>
+          <cite>Gerald Ford</cite>,
+          <span class="source">1974 address to the nation</span>
+        </footer>
+      </article>
+
+      <article class="quote">
+        <blockquote>
+          <p>The future belongs to those who believe in the beauty of their dreams.</p>
+        </blockquote>
+        <footer>
+          <cite>Eleanor Roosevelt</cite>,
+          <span class="source">Democratic National Convention, Chicago, 1940</span>
+        </footer>
+      </article>
+
+      <article class="quote">
+        <blockquote>
+          <p>I have nothing to offer but blood, toil, tears and sweat.</p>
+        </blockquote>
+        <footer>
+          <cite>Winston Churchill</cite>,
+          <span class="source">1940 speech to the House of Commons</span>
+        </footer>
+      </article>
+
+      <article class="quote">
+        <blockquote>
+          <p>Freedom is not given. It is taken.</p>
+        </blockquote>
+        <footer>
+          <cite>Subcomandante Marcos</cite>,
+          <span class="source">Chiapas uprising speech, Mexico, 1994</span>
+        </footer>
+      </article>
+
+      <article class="quote">
+        <blockquote>
+          <p>You can’t separate peace from freedom because no one can be at peace unless he has his freedom.</p>
+        </blockquote>
+        <footer>
+          <cite>Malcolm X</cite>,
+          <span class="source">Speech at the Audubon Ballroom, New York, 1965</span>
+        </footer>
+      </article>
+
+      <article class="quote">
+        <blockquote>
+          <p>I think, therefore I am.</p>
+        </blockquote>
+        <footer>
+          <cite>René Descartes</cite>,
+          <span class="source">Discourse on Method, 1637</span>
+        </footer>
+      </article>
+
+      <article class="quote">
+        <blockquote>
+          <p>Education is the most powerful weapon which you can use to change the world.</p>
+        </blockquote>
+        <footer>
+          <cite>Malala Yousafzai</cite>,
+          <span class="source">Nobel Peace Prize acceptance speech, 2014</span>
+        </footer>
+      </article>
+
+      <article class="quote">
+        <blockquote>
+          <p>Be the change that you wish to see in the world.</p>
+        </blockquote>
+        <footer>
+          <cite>Mahatma Gandhi</cite>,
+          <span class="source">widely attributed</span>
+        </footer>
+      </article>
+
+      <article class="quote">
+        <blockquote>
+          <p>If you want peace, prepare for war.</p>
+        </blockquote>
+        <footer>
+          <cite>Vegetius</cite>,
+          <span class="source">De Re Militari, 4th century</span>
+        </footer>
+      </article>
+
+      <!-- sixteen quotes in total -->
+    </main>
+
+    <footer id="site-footer"></footer>
+
+  </div>
+
+  <script src="nav.js"></script>
+  <script src="quotes.js"></script>
+</body>
+</html>
