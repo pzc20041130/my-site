@@ -21,6 +21,19 @@ body {
   line-height: 1.6;
 }
 
+/* Keyboard users get a green ring; mouse clicks do not draw one. */
+:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+/* Anchors glide, unless the reader asked for less motion. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 /* Single centred column; everything lives inside it. */
 .page {
   max-width: 760px;
@@ -262,7 +275,9 @@ blockquote {
   font-weight: 600;
 }
 
-.quote-hero-btn {
+/* Both the quote reroll and the game use the same pill. */
+.quote-hero-btn,
+.game-btn {
   margin-top: 1.1rem;
   padding: 0.3rem 1rem;
   background: #fff;
@@ -274,7 +289,8 @@ blockquote {
   cursor: pointer;
 }
 
-.quote-hero-btn:hover {
+.quote-hero-btn:hover,
+.game-btn:hover {
   background: var(--ink);
   color: var(--cream);
 }
@@ -412,6 +428,84 @@ a { color: var(--green); }
   font-size: 0.95rem;
 }
 
+/* ---------- Game page ---------- */
+.game {
+  margin-top: 1.5rem;
+  max-width: 520px;
+}
+
+.game-hud {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.game-hud strong {
+  margin-left: 0.4rem;
+  color: var(--ink);
+  font-size: 1.15rem;
+  letter-spacing: 0;
+}
+
+.game-board {
+  padding: 0.6rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.game-board canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+  touch-action: none;
+}
+
+.game-status {
+  margin: 0.9rem 0 0.8rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  min-height: 1.5em;
+}
+
+/* The pad is for thumbs: hidden until the screen is narrow or the pointer is
+   not a mouse. */
+.game-pad {
+  display: none;
+  grid-template-columns: repeat(3, 3.2rem);
+  gap: 0.45rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.game-pad button {
+  height: 3.2rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--ink);
+  font: inherit;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.game-pad button:active {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.game-pad [data-dir="up"]    { grid-column: 2; grid-row: 1; }
+.game-pad [data-dir="left"]  { grid-column: 1; grid-row: 2; }
+.game-pad [data-dir="down"]  { grid-column: 2; grid-row: 2; }
+.game-pad [data-dir="right"] { grid-column: 3; grid-row: 2; }
+
 /* ---------- Narrow screens ---------- */
 @media (max-width: 640px) {
   .page {
@@ -440,5 +534,16 @@ a { color: var(--green); }
 
   .quote-hero-text p {
     font-size: 1.15rem;
+  }
+
+  .game-pad {
+    display: grid;
+  }
+}
+
+/* A touch screen gets the pad even when the window is wide. */
+@media (hover: none) {
+  .game-pad {
+    display: grid;
   }
 }

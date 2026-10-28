@@ -18,6 +18,7 @@
     { href: "index.html", label: "Home" },
     { href: "quotes.html", label: "Quotes" },
     { href: "projects.html", label: "Ideas" },
+    { href: "game.html", label: "Game" },
     { href: "index.html#about", label: "About" },
   ];
 
