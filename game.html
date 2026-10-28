@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake · Pu Zichao</title>
+  <meta name="description" content="Snake, played with the arrow keys or the on-screen pad; the best score is kept between visits.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 1l7 7-7 7-7-7z' fill='%232f7d5e'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page" id="top">
+
+    <header id="site-header"></header>
+
+    <main>
+      <h1>Snake</h1>
+      <p class="lede">Arrow keys or WASD to steer, Space to pause. Your best score sticks around between visits.</p>
+
+      <div class="game">
+        <div class="game-hud">
+          <span>Score <strong data-score>0</strong></span>
+          <span>Best <strong data-best>0</strong></span>
+        </div>
+
+        <div class="game-board">
+          <canvas id="snake" width="400" height="400" role="img" aria-label="Snake board, 20 by 20 squares"></canvas>
+        </div>
+
+        <p class="game-status" data-status aria-live="polite">Press Start, then use the arrow keys or WASD.</p>
+
+        <div class="game-actions">
+          <button class="game-btn" type="button" data-start>Start</button>
+        </div>
+
+        <!-- Only shown on narrow or touch screens; keyboards have the arrow keys. -->
+        <div class="game-pad" role="group" aria-label="Direction pad">
+          <button type="button" data-dir="up" aria-label="Up">&uarr;</button>
+          <button type="button" data-dir="left" aria-label="Left">&larr;</button>
+          <button type="button" data-dir="down" aria-label="Down">&darr;</button>
+          <button type="button" data-dir="right" aria-label="Right">&rarr;</button>
+        </div>
+      </div>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+  </div>
+
+  <script src="nav.js"></script>
+  <script src="snake.js"></script>
+</body>
+</html>
