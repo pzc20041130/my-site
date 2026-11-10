@@ -9,13 +9,23 @@ A small personal site, built while learning HTML, CSS and JavaScript.
 | `index.html` | Home: hero, name, three ways in, About |
 | `quotes.html` | Sixteen quotes, one picked at random at the top |
 | `projects.html` | Six project ideas, with the tech each one needs |
-| `game.html` | Snake: a canvas game, arrow keys or the on-screen pad |
+| `game.html` | One link to 空中飞人 (Air Trapeze), a dark-comedy forex trading game |
 
 `nav.js` builds the header and footer for every page from one list (`PAGES`),
 so adding a page means adding one line there — no markup to copy between files.
 `quotes.js` fills the random quote from the list already on the page, so the
-text lives in one place only. `snake.js` draws the whole game on a canvas, with
-no library and no images.
+text lives in one place only. The game itself lives in `air-trapeze/`, copied
+unchanged from the standalone project; `game.html` is just the doorway.
+
+`assets/` holds the site icon — `icon.svg` as the source, plus 512/192/180 PNGs —
+and `manifest.webmanifest` makes the site installable, so adding it to a phone's
+home screen gives it a real icon instead of a screenshot.
+
+## Deploy
+
+The site is static: no build step, no server. GitHub Pages serves it straight
+from `main` at <https://pzc20041130.github.io/my-site/>, and the game sits at
+`/air-trapeze/`.
 
 ## Run it
 
