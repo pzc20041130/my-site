@@ -14,8 +14,13 @@ A small personal site, built while learning HTML, CSS and JavaScript.
 `nav.js` builds the header and footer for every page from one list (`PAGES`),
 so adding a page means adding one line there — no markup to copy between files.
 `quotes.js` fills the random quote from the list already on the page, so the
-text lives in one place only. The game itself lives in `air-trapeze/`, copied
-unchanged from the standalone project; `game.html` is just the doorway.
+text lives in one place only.
+
+The game is a separate project with its own repository and its own site —
+<https://github.com/pzc20041130/air-trapeze> →
+<https://pzc20041130.github.io/air-trapeze/>. `game.html` here is only the
+doorway, one screenshot and a link out, so this repository never holds a second
+copy of the code that could go stale.
 
 `assets/` holds the site icon — `icon.svg` as the source, plus 512/192/180 PNGs —
 and `manifest.webmanifest` makes the site installable, so adding it to a phone's
@@ -24,8 +29,7 @@ home screen gives it a real icon instead of a screenshot.
 ## Deploy
 
 The site is static: no build step, no server. GitHub Pages serves it straight
-from `main` at <https://pzc20041130.github.io/my-site/>, and the game sits at
-`/air-trapeze/`.
+from `main` at <https://pzc20041130.github.io/my-site/>.
 
 ## Run it
 
