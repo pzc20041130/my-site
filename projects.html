@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Design notes · Air Trapeze</title>
-  <meta name="description" content="Six design ideas behind Air Trapeze: three-act contracts, a loan shark, a ten-second emergency, strategy cards, interest, and a medical record.">
+  <meta name="description" content="Six mechanics Air Trapeze is built on — three-act contracts, a loan shark, a ten-second emergency, strategy cards, cash interest and the medical record — each with the screen it lives on.">
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
@@ -18,73 +18,91 @@
 
     <main>
       <h1>Design notes</h1>
-      <p class="lede">Six mechanics Air Trapeze is built on — each one small enough to say in a sentence, each one doing real work in the game.</p>
+      <p class="lede">Six mechanics Air Trapeze is built on &mdash; each one small enough to say in a sentence, each with the screen it lives on.</p>
 
       <ol class="ideas">
 
         <li class="idea">
-          <h2>Three-Act Contracts</h2>
-          <p>Every contract is split into three acts, and life events land between them:
-             rent, a debt collector, a layoff. Only trades worth at least 1% of your
-             starting equity count toward an act, so a $10 scalp cannot skip the story.</p>
-          <ul class="tags">
-            <li>pacing</li><li>goals</li><li>scoring</li>
-          </ul>
+          <img class="idea-shot" src="assets/design/three-acts.png" alt="A contract panel split into three acts" width="880" height="560" loading="lazy">
+          <div class="idea-body">
+            <h2>Three-Act Contracts</h2>
+            <p>Every contract is split into three acts, and life events land between them:
+               rent, a debt collector, a layoff. Only trades worth at least 1% of your
+               starting equity count toward an act, so a $10 scalp cannot skip the story.</p>
+            <ul class="tags">
+              <li>pacing</li><li>goals</li><li>scoring</li>
+            </ul>
+          </div>
         </li>
 
         <li class="idea">
-          <h2>Fat Fish Credit</h2>
-          <p>A loan shark waits in the corner of the screen. The money keeps the position
-             alive and makes the contract harder at the same time, because the debt becomes
-             a goal you have to clear before the run is over.</p>
-          <ul class="tags">
-            <li>debt</li><li>economy</li><li>narrative</li>
-          </ul>
+          <img class="idea-shot" src="assets/design/fat-fish.png" alt="The Fat Fish Credit panel in the corner of the trading desk" width="880" height="560" loading="lazy">
+          <div class="idea-body">
+            <h2>Fat Fish Credit</h2>
+            <p>A loan shark waits in the corner of the screen. The money keeps the position
+               alive and makes the contract harder at the same time, because the debt becomes
+               a goal you have to clear before the run is over.</p>
+            <ul class="tags">
+              <li>debt</li><li>economy</li><li>narrative</li>
+            </ul>
+          </div>
         </li>
 
         <li class="idea">
-          <h2>Ten-Second Emergency</h2>
-          <p>When news breaks while a position is open, a countdown covers the screen and
-             the market keeps moving underneath it. Do nothing and the game assumes you
-             held — two of those per contract, no more.</p>
-          <ul class="tags">
-            <li>real-time</li><li>pressure</li><li>risk</li>
-          </ul>
+          <img class="idea-shot" src="assets/design/emergency.png" alt="The emergency overlay covering the chart" width="880" height="560" loading="lazy">
+          <div class="idea-body">
+            <h2>Ten-Second Emergency</h2>
+            <p>When news breaks while a position is open, a countdown covers the screen and
+               the market keeps moving underneath it. Do nothing and the game assumes you
+               held &mdash; two of those per contract, no more.</p>
+            <ul class="tags">
+              <li>real-time</li><li>pressure</li><li>risk</li>
+            </ul>
+          </div>
         </li>
 
         <li class="idea">
-          <h2>Strategy Cards</h2>
-          <p>Four schools — trend, news, contrarian, defence — three tiers each, three slots
-             on the desk. Cards are bought between acts, upgraded by buying the same card
-             again, and sold back for half.</p>
-          <ul class="tags">
-            <li>deck-building</li><li>progression</li>
-          </ul>
+          <img class="idea-shot" src="assets/design/strategy.png" alt="The strategy shop between acts" width="880" height="560" loading="lazy">
+          <div class="idea-body">
+            <h2>Strategy Cards</h2>
+            <p>Four schools &mdash; trend, news, contrarian, defence &mdash; three tiers each, three
+               slots on the desk. Cards are bought between acts, upgraded by buying the same
+               card again, and sold back for half.</p>
+            <ul class="tags">
+              <li>deck-building</li><li>progression</li>
+            </ul>
+          </div>
         </li>
 
         <li class="idea">
-          <h2>Interest, Paid in Cash</h2>
-          <p>At every act break your cash pays 5%, capped at $500 — but only the cash you
-             did not spend on a card. Buy now to survive the next act, or bank it and go
-             for the expensive card later.</p>
-          <ul class="tags">
-            <li>trade-off</li><li>economy</li>
-          </ul>
+          <img class="idea-shot" src="assets/design/interest.png" alt="The cash-out screen showing interest paid on cash" width="880" height="560" loading="lazy">
+          <div class="idea-body">
+            <h2>Interest, Paid in Cash</h2>
+            <p>At every act break your cash pays 5%, capped at $500 &mdash; but only the cash you
+               did not spend on a card. Buy now to survive the next act, or bank it and go
+               for the expensive card later.</p>
+            <ul class="tags">
+              <li>trade-off</li><li>economy</li>
+            </ul>
+          </div>
         </li>
 
         <li class="idea">
-          <h2>The Medical Record</h2>
-          <p>The game keeps a file on you: every run, every bail-out, every wipe-out, with
-             the numbers behind it. It is the one part of the game that gets more useful
-             the worse you play.</p>
-          <ul class="tags">
-            <li>persistence</li><li>stats</li><li>storytelling</li>
-          </ul>
+          <img class="idea-shot" src="assets/design/record.png" alt="The accident report generated at the end of a run" width="880" height="611" loading="lazy">
+          <div class="idea-body">
+            <h2>The Medical Record</h2>
+            <p>The game keeps a file on you: every run, every bail-out, every wipe-out, with
+               the numbers behind it. It is the one part of the game that gets more useful
+               the worse you play.</p>
+            <ul class="tags">
+              <li>persistence</li><li>stats</li><li>storytelling</li>
+            </ul>
+          </div>
         </li>
 
       </ol>
 
-      <p class="outro">All six are live in <a href="game.html">Air Trapeze</a> — the game is the proof of concept, not the plan.</p>
+      <p class="outro">All six are live in <a href="https://pzc20041130.github.io/air-trapeze/" target="_blank" rel="noopener">Air Trapeze</a> &mdash; the game is the proof of concept, not the plan.</p>
     </main>
 
     <footer id="site-footer"></footer>
