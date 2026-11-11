@@ -16,8 +16,8 @@
   // not a page of its own.
   const PAGES = [
     { href: "index.html", label: "Home" },
-    { href: "quotes.html", label: "Quotes" },
-    { href: "projects.html", label: "Ideas" },
+    { href: "quotes.html", label: "Notes" },
+    { href: "projects.html", label: "Design" },
     { href: "game.html", label: "Game" },
     { href: "index.html#about", label: "About" },
   ];
