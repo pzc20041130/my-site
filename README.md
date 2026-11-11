@@ -7,7 +7,7 @@ A small personal site, built while learning HTML, CSS and JavaScript.
 | File | What it is |
 | --- | --- |
 | `index.html` | Home: hero, name, three ways in, About |
-| `quotes.html` | Sixteen quotes, one picked at random at the top |
+| `quotes.html` | Sixteen quotes about markets, risk and patience, one picked at random at the top |
 | `projects.html` | Six project ideas, with the tech each one needs |
 | `game.html` | One link to 空中飞人 (Air Trapeze), a dark-comedy forex trading game |
 
