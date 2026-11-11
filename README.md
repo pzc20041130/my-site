@@ -38,6 +38,12 @@ Open `index.html` in a browser. In VS Code, right-click it and choose
 
 ## Style
 
-Everything lives in `style.css`: the cream nav, mint cards, green rules and the
-muted grey for secondary text. Numbers on the ideas page are drawn with CSS
-counters, so reordering the list never means renumbering it by hand.
+Everything lives in `style.css`, in the colours 空中飞人 already uses: mint paper,
+white panels, one deep green for anything that matters, and red only where the
+market falls. Figures and labels are set in a monospace face, the page sits on a
+faint graph-paper grid, and the hero is a candlestick chart
+(`assets/hero-chart.svg`) instead of a photograph — the same one, drawn once,
+never re-rendered.
+
+Numbers on the ideas page and the entries on the home page are drawn with CSS
+counters, so reordering a list never means renumbering it by hand.

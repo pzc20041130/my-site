@@ -21,13 +21,17 @@
     <main>
 
       <!-- ---------- Hero ---------- -->
-      <!-- The reference design keeps this slot as a banner standing in for the
-           final photo. When the real picture is ready, replace the div with:
-           <img src="hero.jpg" alt="..."> -- .hero img below already styles it. -->
+      <!-- Not a photo: the site belongs to a trading game, so the hero shows
+           the market itself. The candles are assets/hero-chart.svg, drawn once
+           and never re-rendered; the figures on top are decoration, and say so. -->
       <div class="hero">
-        <div class="hero-banner" role="img" aria-label="Hero image placeholder">
-          <span>HERO IMAGE</span>
+        <img class="hero-chart" src="assets/hero-chart.svg" alt="" width="1200" height="640">
+        <div class="hero-panel">
+          <span class="hero-pair">EUR / USD</span>
+          <span class="hero-price">1.08353</span>
+          <span class="hero-delta">+0.12%</span>
         </div>
+        <p class="hero-note">SIMULATED MARKET &middot; 空中飞人 / AIR TRAPEZE</p>
       </div>
 
       <h1>Pu Zichao</h1>
@@ -52,7 +56,8 @@
         <p>
           I am Pu Zichao, a computer science student. This site is where I keep
           what I build while learning HTML, CSS and JavaScript &mdash; the quotes
-          worth rereading, and the ideas I want to build next.
+          worth rereading, the ideas I want to build next, and 空中飞人, a
+          trading game I keep going back to.
         </p>
         <p>
           <!-- The nav Contact button points at this section too. -->
