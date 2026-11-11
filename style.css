@@ -130,67 +130,188 @@ body {
   border-color: var(--green-dark);
 }
 
-/* ---------- Hero: the market ---------- */
-.hero {
-  position: relative;
-  height: 20rem;
+/* ---------- The featured game ---------- */
+/* A storefront panel: the chart sits behind the copy, the game itself on the
+   right, and one obvious thing to click. */
+.play-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+  align-items: center;
   margin-top: 1.5rem;
+  padding: 1.75rem;
   border: 1px solid #0a1310;
-  border-radius: 14px;
-  overflow: hidden;
-  background: var(--chart);
-}
-
-.hero-chart {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.95;
-}
-
-.hero-panel {
-  position: absolute;
-  top: 1.1rem;
-  left: 1.15rem;
-  display: flex;
-  align-items: baseline;
-  gap: 0.7rem;
-  font-family: var(--mono);
+  border-radius: 16px;
   color: #eaf5ef;
+  background-color: var(--chart);
+  background-image:
+    linear-gradient(100deg, rgba(14, 26, 22, 0.96) 0%, rgba(14, 26, 22, 0.84) 52%, rgba(14, 26, 22, 0.5) 100%),
+    url("assets/hero-chart.svg");
+  background-size: cover;
+  background-position: center;
 }
 
-.hero-pair {
-  font-size: 0.74rem;
-  letter-spacing: 0.14em;
+.play-kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8fd9bb;
+}
+
+.play-kicker::before {
+  content: "";
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: #45c795;
+  box-shadow: 0 0 0 3px rgba(69, 199, 149, 0.16);
+}
+
+.play-hero h1 {
+  margin: 0.55rem 0 0;
+  color: #fff;
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.play-sub {
+  margin: 0.4rem 0 0.9rem;
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
   color: #9fc3b2;
 }
 
-.hero-price {
-  font-size: 1.75rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
+.play-lede {
+  margin: 0 0 1.2rem;
+  color: #c3d9ce;
+  font-size: 0.96rem;
+  max-width: 34ch;
 }
 
-.hero-delta {
-  padding: 0.05rem 0.4rem;
-  border: 1px solid rgba(69, 199, 149, 0.45);
+.play-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  list-style: none;
+  margin: 0 0 1.4rem;
+  padding: 0;
+}
+
+.play-tags li {
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 4px;
-  background: rgba(69, 199, 149, 0.12);
-  color: #45c795;
-  font-size: 0.78rem;
-}
-
-.hero-note {
-  position: absolute;
-  left: 1.15rem;
-  bottom: 0.9rem;
-  margin: 0;
+  color: #cfe6da;
   font-family: var(--mono);
   font-size: 0.64rem;
-  letter-spacing: 0.16em;
-  color: rgba(234, 245, 239, 0.45);
+  letter-spacing: 0.06em;
+  padding: 0.18rem 0.5rem;
+  text-transform: uppercase;
+}
+
+.play-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.btn-play,
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 8px;
+  padding: 0.7rem 1.15rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.btn-play {
+  background: #45c795;
+  border: 1px solid #45c795;
+  color: #06231a;
+  font-weight: 700;
+}
+
+.btn-play:hover {
+  background: #6fe0b3;
+  border-color: #6fe0b3;
+}
+
+.btn-ghost {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #dcefe7;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.play-art {
+  margin: 0;
+}
+
+.play-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 330px;
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.play-art figcaption {
+  margin-top: 0.6rem;
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+  color: rgba(234, 245, 239, 0.55);
+  text-align: right;
+}
+
+/* ---------- What is in the game ---------- */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.feature {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.95rem 1rem;
+}
+
+.feature h3 {
+  margin: 0 0 0.35rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+.feature p {
+  margin: 0;
+  color: #2f3d37;
+  font-size: 0.86rem;
+  line-height: 1.5;
 }
 
 /* ---------- Title ---------- */
@@ -550,6 +671,22 @@ a { color: var(--green); }
 }
 
 /* ---------- Narrow screens ---------- */
+@media (max-width: 760px) {
+  .play-hero {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .play-lede {
+    max-width: none;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 640px) {
   .page {
     padding: 1.25rem 1rem 2rem;
@@ -567,18 +704,6 @@ a { color: var(--green); }
     row-gap: 0.35rem;
   }
 
-  .hero {
-    height: 14rem;
-  }
-
-  .hero-price {
-    font-size: 1.35rem;
-  }
-
-  .hero-note {
-    font-size: 0.58rem;
-    letter-spacing: 0.12em;
-  }
 
   .quote-hero {
     padding: 1.2rem 1.2rem 1.1rem;

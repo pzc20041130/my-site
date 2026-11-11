@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pu Zichao</title>
-  <meta name="description" content="Personal site of Pu Zichao: a home page, sixteen quotes, six project ideas and a small game.">
+  <title>Pu Zichao · play 空中飞人</title>
+  <meta name="description" content="Pu Zichao's desk: Air Trapeze, a dark-comedy forex trading game you can play in the browser, plus sixteen market quotes and the design ideas behind it.">
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
@@ -20,44 +20,76 @@
 
     <main>
 
-      <!-- ---------- Hero ---------- -->
-      <!-- Not a photo: the site belongs to a trading game, so the hero shows
-           the market itself. The candles are assets/hero-chart.svg, drawn once
-           and never re-rendered; the figures on top are decoration, and say so. -->
-      <div class="hero">
-        <img class="hero-chart" src="assets/hero-chart.svg" alt="" width="1200" height="640">
-        <div class="hero-panel">
-          <span class="hero-pair">EUR / USD</span>
-          <span class="hero-price">1.08353</span>
-          <span class="hero-delta">+0.12%</span>
+      <!-- ---------- The game, front and centre ---------- -->
+      <!-- A storefront panel rather than a portrait: the chart runs behind the
+           copy, the game sits on the right, and there is one obvious button. -->
+      <section class="play-hero">
+        <div class="play-copy">
+          <p class="play-kicker">Now playing &middot; simulated market</p>
+          <h1 lang="zh-CN">空中飞人</h1>
+          <p class="play-sub">Air Trapeze</p>
+          <p class="play-lede">
+            A dark-comedy forex game about refusing to leave the table. Four modes,
+            fourteen crisis files, and a market that keeps moving whether you do or not.
+          </p>
+          <ul class="play-tags">
+            <li>4 modes</li>
+            <li>14 crisis files</li>
+            <li>no install</li>
+          </ul>
+          <div class="play-actions">
+            <a class="btn-play" href="https://pzc20041130.github.io/air-trapeze/" target="_blank" rel="noopener">&#9654; Play now</a>
+            <a class="btn-ghost" href="game.html">How it plays</a>
+          </div>
         </div>
-        <p class="hero-note">SIMULATED MARKET &middot; 空中飞人 / AIR TRAPEZE</p>
-      </div>
 
-      <h1>Pu Zichao</h1>
-      <p class="tagline">One page, one name, three ways in.</p>
+        <figure class="play-art">
+          <img src="assets/air-trapeze-desktop.png"
+               alt="The Air Trapeze dashboard: account equity, currency pairs, a candlestick chart and the order panel"
+               width="1440" height="1000">
+          <figcaption>Simulated account &middot; no real money</figcaption>
+        </figure>
+      </section>
 
-      <!-- ---------- Three entry cards ---------- -->
-      <div class="cards">
-        <a class="card" href="quotes.html">
-          <span>Quotes</span><span class="arrow">&rarr;</span>
-        </a>
-        <a class="card" href="projects.html">
-          <span>Ideas in the game</span><span class="arrow">&rarr;</span>
-        </a>
-        <a class="card" href="#about">
-          <span>About and contact</span><span class="arrow">&rarr;</span>
-        </a>
-      </div>
+      <!-- Three things worth knowing before the first trade. -->
+      <section class="features" aria-label="What is in the game">
+        <article class="feature">
+          <h3>Four modes</h3>
+          <p>A coach mode that reduces the first trade to one question, then standard, hard, and contract runs with their own endings.</p>
+        </article>
+        <article class="feature">
+          <h3>Fourteen crisis files</h3>
+          <p>Historical crashes, rewritten as case files to read between trades.</p>
+        </article>
+        <article class="feature">
+          <h3>Saves on your device</h3>
+          <p>Progress lives in the browser. Nothing is uploaded, and nobody is watching.</p>
+        </article>
+      </section>
+
+      <!-- ---------- Everything else on the desk ---------- -->
+      <section class="section" id="desk">
+        <h2>Also on the desk</h2>
+        <div class="cards">
+          <a class="card" href="quotes.html">
+            <span>Quotes</span><span class="arrow">&rarr;</span>
+          </a>
+          <a class="card" href="projects.html">
+            <span>Ideas in the game</span><span class="arrow">&rarr;</span>
+          </a>
+          <a class="card" href="#about">
+            <span>About and contact</span><span class="arrow">&rarr;</span>
+          </a>
+        </div>
+      </section>
 
       <!-- ---------- About ---------- -->
       <section class="section" id="about">
         <h2>About</h2>
         <p>
-          I am Pu Zichao, a computer science student. This site is where I keep
-          what I build while learning HTML, CSS and JavaScript &mdash; the quotes
-          worth rereading, the ideas I want to build next, and 空中飞人, a
-          trading game I keep going back to.
+          I am Pu Zichao, a computer science student. This site is where I keep what
+          I build while learning HTML, CSS and JavaScript &mdash; the market quotes
+          worth rereading, the design ideas behind the game, and the game itself.
         </p>
         <p>
           <!-- The nav Contact button points at this section too. -->
