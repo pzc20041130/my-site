@@ -18,17 +18,22 @@
 
     <main>
       <h1>Desk notes</h1>
-      <p class="lede">Sixteen lines taped above the desk in Air Trapeze &mdash; the ones the coach quotes at you, one drawn at random above, all sixteen below, each with who said it and where.</p>
+      <p class="lede">Every run in Air Trapeze ends on a settlement screen with one of these lines on it &mdash; sixteen things the market keeps teaching and everybody keeps forgetting. One drawn at random above, all sixteen below, each with who said it and where.</p>
 
-      <!-- Filled by quotes.js from the list below: one quote drawn at random,
-           with a button for another. Hidden until there is something to show,
-           so a browser without JavaScript still gets the whole list. -->
-      <section class="quote-hero" id="quote-hero" aria-label="Random quote" hidden>
-        <div aria-live="polite">
-          <div class="quote-hero-text" data-hero-text></div>
-          <p class="quote-hero-meta" data-hero-meta></p>
+      <!-- The settlement screen, standing in for the one the game shows when a
+           run ends. Filled by quotes.js from the list below, so the text lives
+           in one place; hidden until there is something to show, so a browser
+           without JavaScript still gets the whole list. -->
+      <section class="settle" id="quote-hero" aria-label="Settlement line" hidden>
+        <p class="settle-tag">Run over &middot; settlement</p>
+        <div class="settle-body" aria-live="polite">
+          <div class="settle-text" data-hero-text></div>
+          <p class="settle-meta" data-hero-meta></p>
         </div>
-        <button class="quote-hero-btn" type="button">Another quote &rarr;</button>
+        <div class="settle-actions">
+          <a class="btn-play btn-sm" href="https://pzc20041130.github.io/air-trapeze/" target="_blank" rel="noopener">Run it again</a>
+          <button class="btn-ghost btn-sm" type="button">Another line</button>
+        </div>
       </section>
 
       <h2 class="list-title">All sixteen</h2>
