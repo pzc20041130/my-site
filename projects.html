@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project ideas · Pu Zichao</title>
-  <meta name="description" content="Six project ideas, each with the tech it would take to build.">
+  <title>Ideas · Pu Zichao</title>
+  <meta name="description" content="Six design ideas behind 空中飞人 (Air Trapeze): three-act contracts, a loan shark, a ten-second emergency, strategy cards, interest, and a medical record.">
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
@@ -17,70 +17,74 @@
     <header id="site-header"></header>
 
     <main>
-      <h1>Project ideas</h1>
-      <p class="lede">Six things I want to build — each small enough to finish in a week, each one teaching me one new thing.</p>
+      <h1>Ideas in the game</h1>
+      <p class="lede">Six design ideas 空中飞人 is built on — each one small enough to say in a sentence, each one doing real work in the game.</p>
 
       <ol class="ideas">
 
         <li class="idea">
-          <h2>Planner with Alarms</h2>
-          <p>A plan for the day where every block gets a start time and an alarm, so
-             the plan interrupts me instead of sitting quietly in a tab. Tomorrow
-             starts as a copy of today.</p>
+          <h2>Three-Act Contracts</h2>
+          <p>Every contract is split into three acts, and life events land between them:
+             rent, a debt collector, a layoff. Only trades worth at least 1% of your
+             starting equity count toward an act, so a $10 scalp cannot skip the story.</p>
           <ul class="tags">
-            <li>HTML</li><li>JS</li><li>Web Audio</li><li>localStorage</li>
+            <li>pacing</li><li>goals</li><li>scoring</li>
           </ul>
         </li>
 
         <li class="idea">
-          <h2>Word Well</h2>
-          <p>Flashcards for the words I keep forgetting. I type the answer, and the
-             card comes back sooner if I miss it, later if I get it right.</p>
+          <h2>Fat Fish Credit</h2>
+          <p>A loan shark waits in the corner of the screen. The money keeps the position
+             alive and makes the contract harder at the same time, because the debt becomes
+             a goal you have to clear before the run is over.</p>
           <ul class="tags">
-            <li>JS</li><li>arrays</li><li>localStorage</li>
+            <li>debt</li><li>economy</li><li>narrative</li>
           </ul>
         </li>
 
         <li class="idea">
-          <h2>Timetable Grid</h2>
-          <p>My class schedule as a grid I can drag blocks around in, with a warning
-             when two courses land in the same slot and a print view for the fridge.</p>
+          <h2>Ten-Second Emergency</h2>
+          <p>When news breaks while a position is open, a countdown covers the screen and
+             the market keeps moving underneath it. Do nothing and the game assumes you
+             held — two of those per contract, no more.</p>
           <ul class="tags">
-            <li>CSS grid</li><li>drag events</li><li>JS</li>
+            <li>real-time</li><li>pressure</li><li>risk</li>
           </ul>
         </li>
 
         <li class="idea">
-          <h2>Cleaning Duty Bot</h2>
-          <p>Posts tomorrow's cleaning duty to the class chat every evening and pings
-             whoever is on, so the argument about whose turn it is ends before it
-             starts.</p>
+          <h2>Strategy Cards</h2>
+          <p>Four schools — trend, news, contrarian, defence — three tiers each, three slots
+             on the desk. Cards are bought between acts, upgraded by buying the same card
+             again, and sold back for half.</p>
           <ul class="tags">
-            <li>Python</li><li>cron</li><li>webhook</li>
+            <li>deck-building</li><li>progression</li>
           </ul>
         </li>
 
         <li class="idea">
-          <h2>Quote Wall</h2>
-          <p>The quotes from this site as a wall of cards: one is picked at random,
-             set in a shareable layout and exported to an image I can send to someone.</p>
+          <h2>Interest, Paid in Cash</h2>
+          <p>At every act break your cash pays 5%, capped at $500 — but only the cash you
+             did not spend on a card. Buy now to survive the next act, or bank it and go
+             for the expensive card later.</p>
           <ul class="tags">
-            <li>JS</li><li>Canvas</li><li>CSS</li>
+            <li>trade-off</li><li>economy</li>
           </ul>
         </li>
 
         <li class="idea">
-          <h2>Reading Log</h2>
-          <p>Every book I finish, with a bar per month and one sentence on what I took
-             from it — a page that gets more useful the lazier I am about updating it.</p>
+          <h2>The Medical Record</h2>
+          <p>The game keeps a file on you: every run, every bail-out, every wipe-out, with
+             the numbers behind it. It is the one part of the game that gets more useful
+             the worse you play.</p>
           <ul class="tags">
-            <li>JS</li><li>JSON</li><li>CSS</li>
+            <li>persistence</li><li>stats</li><li>storytelling</li>
           </ul>
         </li>
 
       </ol>
 
-      <p class="outro">None of these is built yet. As each one ships it gets its own page and a line here.</p>
+      <p class="outro">All six are live in <a href="game.html">空中飞人</a> — the game is the proof of concept, not the plan.</p>
     </main>
 
     <footer id="site-footer"></footer>
