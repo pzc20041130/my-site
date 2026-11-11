@@ -9,7 +9,7 @@ A small personal site, built while learning HTML, CSS and JavaScript.
 | `index.html` | Home: the game as the featured title, with a Play button, then the rest of the desk |
 | `quotes.html` | Sixteen quotes about markets, risk and patience, one picked at random at the top |
 | `projects.html` | Six design ideas behind the game, each with the mechanics it uses |
-| `game.html` | One link to 空中飞人 (Air Trapeze), a dark-comedy forex trading game |
+| `game.html` | One link to Air Trapeze, a dark-comedy forex trading game |
 
 `nav.js` builds the header and footer for every page from one list (`PAGES`),
 so adding a page means adding one line there — no markup to copy between files.
@@ -38,7 +38,7 @@ Open `index.html` in a browser. In VS Code, right-click it and choose
 
 ## Style
 
-Everything lives in `style.css`, in the colours 空中飞人 already uses: mint paper,
+Everything lives in `style.css`, in the colours Air Trapeze already uses: mint paper,
 white panels, one deep green for anything that matters, and red only where the
 market falls. Figures and labels are set in a monospace face, the page sits on a
 faint graph-paper grid, and the hero is a candlestick chart
